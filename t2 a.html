@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Munthra Portfolio</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9fa;
+    color:#333;
+}
+
+/* Navbar */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    z-index:1000;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#2563eb;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+/* Hero Section */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero span{
+    color:#ffd700;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:1.2rem;
+}
+
+/* Buttons */
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:white;
+    color:#2563eb;
+    border-radius:30px;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* Sections */
+
+.section{
+    padding:90px 20px;
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:25px;
+    color:#2563eb;
+}
+
+/* Skills */
+
+.skills-container{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+}
+
+.skill-card i{
+    font-size:40px;
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+/* Projects */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.project-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:scale(1.03);
+}
+
+/* Contact */
+
+.contact-info p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    color:white;
+}
+
+/* Scroll Animation */
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">Munthra</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero -->
+
+<section id="home" class="hero">
+    <div class="hero-content">
+
+        <h1>Hello, I'm <span>Munthra</span></h1>
+
+        <p>
+            Python Developer |
+            Java Programmer |
+            Web Enthusiast
+        </p>
+
+        <a href="#contact" class="btn">
+            Contact Me
+        </a>
+
+    </div>
+</section>
+
+<!-- About -->
+
+<section id="about" class="section reveal">
+
+    <h2>About Me</h2>
+
+    <p>
+        I am Munthra, an aspiring Software Developer
+        passionate about Python, Java, and Web Development.
+        I enjoy building responsive applications and
+        continuously learning new technologies to solve
+        real-world problems.
+    </p>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills" class="section reveal">
+
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Communication</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-brands fa-python"></i>
+            <h3>Python Programming</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-brands fa-java"></i>
+            <h3>Java</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects" class="section reveal">
+
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>
+                Built a responsive portfolio website using
+                HTML, CSS and JavaScript.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Student Management System</h3>
+            <p>
+                Developed a Java-based application for
+                managing student records efficiently.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Python Automation Tool</h3>
+            <p>
+                Created Python scripts to automate
+                repetitive tasks and improve productivity.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Resume -->
+
+<section id="resume" class="section reveal">
+
+    <h2>Resume</h2>
+
+    <div class="project-card">
+
+        <h3>Munthra</h3>
+
+        <br>
+
+        <p>
+            Aspiring Software Developer skilled in
+            Python, Java, HTML, CSS and JavaScript.
+            Passionate about creating responsive web
+            applications and solving real-world problems.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Email:</strong>
+            munthrajagen@gmail.com
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            8122808037
+        </p>
+
+        <p>
+            <strong>LinkedIn:</strong>
+            linkedin.com/in/munthrajagen
+        </p>
+
+        <p>
+            <strong>GitHub:</strong>
+            github.com/munthrajagen
+        </p>
+
+        <br>
+
+        <h4>Skills</h4>
+
+        <p>
+            Python • Java • HTML • CSS • JavaScript •
+            Communication • Problem Solving
+        </p>
+
+        <br>
+
+        <a href="C:\Users\munthra\Downloads\Munthra J.pdf"download class="btn">
+            Download Resume
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="section reveal">
+
+    <h2>Contact Me</h2>
+
+    <div class="contact-info">
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            8122808037
+        </p>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            munthrajagen@gmail.com
+        </p>
+
+        <p>
+            <i class="fa-brands fa-linkedin"></i>
+            linkedin.com/in/munthrajagen
+        </p>
+
+        <p>
+            <i class="fa-brands fa-github"></i>
+            github.com/munthrajagen
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Munthra | Portfolio Website</p>
+</footer>
+
+<script>
+
+const reveals =
+document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+
+    reveals.forEach((element) => {
+
+        const top =
+        element.getBoundingClientRect().top;
+
+        const visible = 150;
+
+        if(top < window.innerHeight - visible){
+            element.classList.add("active");
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
